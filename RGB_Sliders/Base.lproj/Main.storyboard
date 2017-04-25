@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -54,7 +55,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open"/>
                                 <connections>
-                                    <segue destination="h3A-Wr-3ri" kind="show" id="7m8-UC-JPD"/>
+                                    <segue destination="h3A-Wr-3ri" kind="show" identifier="openColor" id="7m8-UC-JPD">
+                                        <segue key="commit" inheritsFrom="parent" id="UeB-sw-QKI"/>
+                                        <segue key="preview" inheritsFrom="commit" id="AWT-IT-uuP"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,4 +113,7 @@
             <point key="canvasLocation" x="138.75" y="136.26760563380282"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7m8-UC-JPD"/>
+    </inferredMetricsTieBreakers>
 </document>
